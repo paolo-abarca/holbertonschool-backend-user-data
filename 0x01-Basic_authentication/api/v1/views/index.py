@@ -26,7 +26,7 @@ def stats() -> str:
     return jsonify(stats)
 
 
-@app_views.route('/unauthorized/', methods=['GET'], strict_slashes=False)
+@app_views.route('/unauthorized', methods=['GET'], strict_slashes=False)
 def unauthorized() -> str:
     """
     For testing this new error handler, add a new endpoint
@@ -34,7 +34,7 @@ def unauthorized() -> str:
     abort(401)
 
 
-@app_views.route('/forbidden/', methods=['GET'], strict_slashes=False)
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
 def forbidden() -> str:
     """
     For testing this new error handler, forbidden
